@@ -13,8 +13,8 @@
 - Make something awesome!
 
 ## Login
-- email: admin@gmail.com
-- password: admin
+- Email: admin@gmail.com
+- Password: admin
 
 
 ## License
