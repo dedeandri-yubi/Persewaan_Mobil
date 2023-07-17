@@ -8,11 +8,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Pesanan</h1>
+                        <h1 class="m-0">Cars</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Pesanan</a></li>
+                            <li class="breadcrumb-item"><a href="#">Cars</a></li>
                             <li class="breadcrumb-item active">Edit</li>
                         </ol>
                     </div><!-- /.col -->
@@ -28,52 +28,43 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('pesanan.update', $pesanan->id) }}">
+                                <form method="POST" action="{{ route('cars.update', $car->id) }}">
                                     @csrf
                                     @method('PUT')
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <label for="no_pesanan">No Pesanan</label>
-                                            <input type="text" name="no_pesanan" value="{{ $pesanan->no_pesanan }}"
-                                                class="form-control" required autocomplete="off" readonly>
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
+                                            <label for="merek">Merek</label>
+                                            <input type="text" name="merek" class="form-control" required
+                                                autocomplete="off" value="{{ $car->merek }}">
                                         </div>
                                         <div class="col-lg-4">
-                                            <label for="tanggal_pinjam">Tanggal Pesanan</label>
-                                            <input type="date" name="tanggal_pesanan" class="form-control" required
-                                                autocomplete="off" value="{{ $pesanan->tanggal_pesanan }}">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
+                                            <label for="model">Model</label>
+                                            <input type="text" name="model" class="form-control" required
+                                                autocomplete="off" value="{{ $car->model }}">
                                         </div>
                                         <div class="col-lg-4">
-                                            <label for="nama_supplier">Nama Supplier</label>
-                                            <input type="text" name="nama_supplier" class="form-control" required
-                                                autocomplete="off" value="{{ $pesanan->nama_supplier }}">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
+                                            <label for="tahun">Tahun</label>
+                                            <input type="text" name="tahun" class="form-control" required
+                                                autocomplete="off" value="{{ $car->tahun }}">
                                         </div>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-lg-4">
-                                            <label for="nama_product">Nama Product</label>
-                                            <input type="text" name="nama_product" class="form-control" required
-                                                autocomplete="off" value="{{ $pesanan->nama_product }}">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
+                                            <label for="warna">Warna</label>
+                                            <input type="text" name="warna" class="form-control" required
+                                                autocomplete="off" value="{{ $car->warna }}">
                                         </div>
                                         <div class="col-lg-4">
-                                            <label for="total">Total</label>
-                                            <input type="text" name="total" class="form-control" required
-                                                autocomplete="off" value="{{ $pesanan->total }}">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
+                                            <label for="plat_nomor">Plat Nomor</label>
+                                            <input type="text" name="plat_nomor" class="form-control" required
+                                                autocomplete="off" value="{{ $car->plat_nomor }}">
                                         </div>
+                                        <div class="col-lg-4">
+                                            <label for="harga_sewa">Harga Sewa</label>
+                                            <input type="text" name="harga_sewa" class="form-control" required
+                                                autocomplete="off" value="{{ $car->harga_sewa }}">
+                                        </div>
+
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-lg-12">

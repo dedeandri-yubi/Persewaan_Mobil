@@ -18,5 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('product', App\Http\Controllers\ProductController::class);
-Route::resource('pesanan', App\Http\Controllers\Transaction\PesananController::class);
+Route::resource('pengguna', App\Http\Controllers\PenggunaController::class)->middleware('auth');
+Route::resource('cars', App\Http\Controllers\CarController::class);
+Route::resource('peminjaman', App\Http\Controllers\Transaction\PeminjamanController::class);
+Route::resource('pengembalian', App\Http\Controllers\Transaction\PengembalianController::class);

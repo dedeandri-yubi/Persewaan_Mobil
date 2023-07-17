@@ -29,6 +29,9 @@ class CreateNewUser implements CreatesNewUsers
                 'max:255',
                 Rule::unique(User::class),
             ],
+            'nomor_telepon' => ['required', 'string', 'max:255'],
+            'alamat' => ['required', 'string', 'max:255'],
+            'nomor_sim' => ['required', 'string', 'max:255'],
             'password' => $this->passwordRules(),
         ])->validate();
 
@@ -36,6 +39,9 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'nomor_telepon' => $input['nomor_telepon'],
+            'alamat' => $input['alamat'],
+            'nomor_sim' => $input['nomor_sim'],
         ]);
     }
 }

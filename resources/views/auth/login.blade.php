@@ -5,7 +5,7 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ route('home') }}">PT Integrasi Megakanal Agensi
+                <a href="{{ route('home') }}">Persewaan Mobil
                 </a>
             </div>
             <!-- /.login-logo -->

@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\SiswaController;
 use App\Http\Controllers\Api\JWTAuthController;
 
 /*
@@ -25,5 +24,4 @@ Route ::group(['middleware' => 'auth.jwt'], function () {
     Route ::get('logout', [JWTAuthController::class, 'logout']);
 });
 
-Route::resource('siswa', SiswaController::class);
 

@@ -15,10 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table ->foreignId('role_id') -> constrained('role') -> onDelete('cascade') -> onUpdate('cascade');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('nomor_telepon');
+            $table->string('alamat');
+            $table->string('nomor_sim');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

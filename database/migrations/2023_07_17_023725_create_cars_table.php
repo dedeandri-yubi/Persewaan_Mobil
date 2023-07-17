@@ -11,9 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->string('role');
+            $table->string('merek');
+            $table->string('model');
+            $table->string('tahun');
+            $table->string('warna');
+            $table->string('plat_nomor');
+            $table->float('harga_sewa');
+            $table->string('status')->default('Tersedia');
             $table->timestamps();
         });
     }
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('cars');
     }
 };

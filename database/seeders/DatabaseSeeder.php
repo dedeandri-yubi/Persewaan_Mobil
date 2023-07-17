@@ -6,26 +6,25 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use App\Models\Role;
-use App\Models\Pesanan;
+use App\Models\Car;
 
 class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        Role::factory(5) -> create();
         DB ::table('users')->insert([
             'name' =>'admin',
-            'role_id' => '1',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin'),
+            'nomor_telepon' => '08123456789',
+            'alamat' => 'Jl. Raya No. 1',
+            'nomor_sim' => '123456789',
             'remember_token' => Str ::random(10),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-
-        Pesanan::factory(15) -> create();
+    Car::factory(15) -> create();
 
     }
 }

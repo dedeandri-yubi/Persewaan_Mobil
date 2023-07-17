@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title ?? 'PT Integrasi Megakanal Agensi' }}</title>
+    <title>{{ $title ?? 'Persewaan Mobil' }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -171,7 +171,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="{{ route('home') }}" class="brand-link">
-                <span class="brand-text font-weight-light">{{ $title ?? 'PT Integrasi Megakanal Agensi' }}</span>
+                <span class="brand-text font-weight-light float-center">{{ $title ?? 'Persewaan Mobil' }}</span>
             </a>
 
             <!-- Sidebar -->
@@ -179,6 +179,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="info">
+                        <img src="" alt="">
                         <a href="#" class="d-block">{{ auth()->user()->name ?? '' }}</a>
                     </div>
                 </div>
@@ -186,46 +187,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        {{-- <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    Master Data
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview" style="display: none;">
-                                <li class="nav-item">
-                                    <a href="/siswa" class="nav-link">
-                                        <i class="far fa-user nav-icon"></i>
-                                        <p>Siswa</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-treeview" style="display: none;">
-                                <li class="nav-item">
-                                    <a href="/rak" class="nav-link">
-                                        <i class="fas fa-code-branch nav-icon"></i>
-                                        <p>Rak</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="/buku" class="nav-link">
-                                        <i class="nav-icon fas fa-th"></i>
-                                        <p>
-                                            Buku
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> --}}
                         <li class="nav-item">
-                            <a href="/product" class="nav-link">
-                                <i class="nav-icon fas fa-handshake"></i>
+                            <a href="/home" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Product
+                                    Dashbord
                                 </p>
                             </a>
                         </li>
@@ -233,19 +199,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                    Transaction
+                                    Management User
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview" style="display: none;">
                                 <li class="nav-item">
-                                    <a href="/pesanan" class="nav-link">
-                                        <i class="fas fa-money-bill nav-icon"></i>
-                                        <p>Pesanan</p>
+                                    <a href="/pengguna" class="nav-link">
+                                        <i class="fas fa-users nav-icon"></i>
+                                        <p>List Pengguna</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Management Mobil
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a href="/cars" class="nav-link">
+                                        <i class="fas fa-car nav-icon"></i>
+                                        <p>List Mobil</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Transactions
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a href="/peminjaman" class="nav-link">
+                                        <i class="fas fa-handshake nav-icon"></i>
+                                        <p>List Peminjaman</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a href="/pengembalian" class="nav-link">
+                                        <i class="fas fa-hands nav-icon"></i>
+                                        <p>List Pengembalian</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
                     </ul>
 
                 </nav>

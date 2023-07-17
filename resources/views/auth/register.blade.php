@@ -5,12 +5,12 @@
     <body class="hold-transition register-page">
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ route('home') }}"><b>{{ config('app.name', 'Laravel') }}</b> 1.0</a>
+                <b>Persewaan Mobil</b>
             </div>
 
             <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="login-box-msg">Register a new membership</p>
+                    <p class="login-box-msg">Penyewaan Mobil</p>
 
                     <form action="{{ route('register') }}" method="post">
                         @csrf
@@ -37,6 +37,49 @@
                                 </div>
                             </div>
                             @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control @error('nomor_telepon') is-invalid @enderror"
+                                name="nomor_telepon" placeholder="No Telepon" name="nomor_telepon"
+                                value="{{ old('nomor_telepon') }}">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                            @error('nomor_telepon')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat"
+                                placeholder="Alamat" name="alamat" value="{{ old('alamat') }}">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-map-marker-alt"></span>
+                                </div>
+                            </div>
+                            @error('alamat')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control @error('nomor_sim') is-invalid @enderror"
+                                name="nomor_sim" placeholder="Nomor SIM" name="nomor_sim" value="{{ old('nomor_sim') }}">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-id-card"></span>
+                                </div>
+                            </div>
+                            @error('nomor_sim')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Siswa;
-use App\Models\Pesanan;
+use App\Models\Car;
+use App\Models\Peminjaman;
+use App\Models\Pengembalian;
 
 class HomeController extends Controller
 {
@@ -14,8 +15,10 @@ class HomeController extends Controller
 
     public function index()
     {
-        $pesanan = Pesanan::count();
-        return view('dashboard.index', compact('pesanan'));
+        $cars = Car::count();
+        $peminjaman = Peminjaman::count();
+        $pengembalian = Pengembalian::count();
+        return view('dashboard.index',compact('cars','peminjaman','pengembalian'));
     }
 
 }

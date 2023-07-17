@@ -8,11 +8,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Pesanan</h1>
+                        <h1 class="m-0"> Cars</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Pesanan</a></li>
+                            <li class="breadcrumb-item"><a href="#"> Cars</a></li>
                             <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div><!-- /.col -->
@@ -28,49 +28,40 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="post" action="{{ route('pesanan.store') }}">
+                                <form method="post" action="{{ route('cars.store') }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <label for="no_pesanan">Kode Pesanan</label>
-                                            <input type="text" name="no_pesanan" value="{{ $no_pesanan }}"
-                                                class="form-control" required autocomplete="off" readonly>
-                                            <div class="invalid-feedback">
-                                            </div>
+                                            <label for="merek">Merek</label>
+                                            <input type="text" name="merek" class="form-control" required
+                                                autocomplete="off">
                                         </div>
                                         <div class="col-lg-4">
-                                            <label for="tanggal_pesanan">Tanggal Pesanan</label>
-                                            <input type="date" name="tanggal_pesanan" class="form-control" required
+                                            <label for="model">Model</label>
+                                            <input type="text" name="model" class="form-control" required
                                                 autocomplete="off">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <label for="nama_supplier">Nama Supplier</label>
-                                            <input type="text" name="nama_supplier" class="form-control" required
+                                            <label for="tahun">Tahun</label>
+                                            <input type="text" name="tahun" class="form-control" required
                                                 autocomplete="off">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-lg-4">
-                                            <label for="nama_product">Nama Product</label>
-                                            <input type="text" name="nama_product" class="form-control" required
+                                            <label for="warna">Warna</label>
+                                            <input type="text" name="warna" class="form-control" required
                                                 autocomplete="off">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <label for="total">Total</label>
-                                            <input type="number" name="total" class="form-control" required
+                                            <label for="plat_nomor">Plat Nomor</label>
+                                            <input type="text" name="plat_nomor" class="form-control" required
                                                 autocomplete="off">
-                                            <div class="invalid-feedback">
-                                                Please choose a username.
-                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="harga_sewa">Harga Sewa</label>
+                                            <input type="number" name="harga_sewa" class="form-control" required
+                                                autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="row mt-3">
