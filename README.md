@@ -12,6 +12,10 @@
 - Run migration `php artisan migrate`
 - Make something awesome!
 
+## Login
+- email: admin@gmail.com
+- password: admin
+
 
 ## License
 Licensed under the MIT license.
